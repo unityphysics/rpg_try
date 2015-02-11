@@ -1,4 +1,4 @@
-﻿-scripts:
+-scripts:
 	1_
 	movement //cutremovement//
 	camara // version decentre
@@ -20,4 +20,4 @@
 -arte ya veremos
 
 
-BANANANANANNAANNANANANANANANANNANANANANA - no bannana nooo
+BANANANANANNAANNANANANANANANANNANANANANA
