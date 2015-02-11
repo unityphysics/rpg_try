@@ -18,5 +18,11 @@
 -dinero/drops/xp 
 
 -arte ya veremos
-en casa de herrero cuchara de palo
+<<<<<<< HEAD
+
 BANANANANANNAANNANANANANANANANNANANANANA - no bannana nooo
+=======
+
+
+BANANANANANNAANNANANANANANANANNANANANANA
+>>>>>>> origin/master
