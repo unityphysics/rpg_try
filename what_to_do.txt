@@ -1,0 +1,20 @@
+-scripts:
+	1_
+	movement //cutremovement//
+	camara // version decentre
+	player (drops or 	xp) 
+	inventory // 
+	
+	2_
+	control escenario
+	enemmy 
+	batalla (player, inventory, enemmy)
+	
+	3_
+	guardado (despues) 
+
+-batalla (diseño visual+-)
+
+-dinero/drops/xp 
+
+-arte ya veremos
