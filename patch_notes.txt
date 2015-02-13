@@ -1,4 +1,21 @@
-﻿13/02/2015 12:50 LEI
+﻿
+13/02/2015 12:50 Sigr3s PlayerStats
+>Sistema de personaje 0.1.0
+  +var de Stats del personaje
+  +var de Equipo del personaje
+  +var de Batalla (inimplemenrtados)
+
+Notas:
+  *Diseñadando el conjunto de Psj ->inventario -> items
+	
+Comentarios:
+  Aún uqeda gran parte ya que este es solo el esquema de PlayerStats
+	
+Futuras implementaciones:
+  Proxima actualizacion carga de stats al inicio de la partida o en cambio de escena
+	 
+
+13/02/2015 12:50 LEI
 >Sistema de movimiento 1.0.0
   +Movimiento del Player controlado con WASD: delante, lateral izquierdo, atrás, lateral derecho respectivamente.
   +Movimiento también controlado con teclas de flechas.
