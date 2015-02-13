@@ -1,1 +1,18 @@
-﻿
+﻿13/02/2015 12:50 LEI
+>Sistema de movimiento 1.0.0
+  +Movimiento del Player controlado con WASD: delante, lateral izquierdo, atrás, lateral derecho respectivamente.
+  +Movimiento también controlado con teclas de flechas.
+  +Rotación del Player controlado con QE*: sentido anti-reloj, sentido reloj respectivamente.
+  +Cámara controlada con mouse, movimiento de cámara "independiente" del cuerpo del Player.
+  +Botón Mouse Derecho para rotar el Player con la cámara.
+
+Notas:
+  *La cámara rota con el Player, y de momento me gusta así.
+   Si queréis hacemos una votación si es mejor que la cámara no rote con el Player o dejarla así.
+
+Comentarios:
+  No he implementado el salto porque de momento no veo la necesidad, salvo si queréis hacer cosas de plataforma.
+  Plataforma no pega con este este estilo de juego.
+
+Futuras implementaciones:
+  +Posiblemente salto.
