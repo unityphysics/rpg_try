@@ -1,5 +1,8 @@
-﻿
-13/02/2015 12:50 Sigr3s PlayerStats
+﻿13/02/2015 21:00 Sigr3s general
+  Añadido en el script de PlayerStats el reload level cuando tu vida baja de 0 o tu y baja de -10 para poder probar en los niveles test
+
+
+13/02/2015 21:00 Sigr3s PlayerStats
 >Sistema de personaje 0.1.0
   +var de Stats del personaje
   +var de Equipo del personaje
