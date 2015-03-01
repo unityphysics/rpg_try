@@ -9,9 +9,7 @@ function Start () {
 }
 
 function Update () {
-	Debug.DrawRay(transform.position, transform.forward*5, Color.blue);
-
-	if(Input.GetButton("Fire2")) {
+	if((Input.GetAxis("Mouse X") && !Input.GetButton("Fire2")) || Input.GetButtonUp("Fire2")) {
 		parentMovementComponent.RotateYAdd(transform.eulerAngles.y);
 		transform.localEulerAngles.y = 0;
 	}
