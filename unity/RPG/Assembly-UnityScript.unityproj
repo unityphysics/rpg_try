@@ -39,19 +39,22 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Inventory Scripts\Inventory.js" />
+     <Compile Include="Assets\Scripts\Inventory Scripts\Item.js" />
+     <Compile Include="Assets\Scripts\Inventory Scripts\Takeit.js" />
      <Compile Include="Assets\Scripts\Player Scripts\PLayerStats.js" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerCamera.js" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerCameraControl.js" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.js" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
