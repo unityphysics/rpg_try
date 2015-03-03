@@ -47,12 +47,13 @@ function PlayerDealDamage (){
 
 //funciones interaccion inventario
 function PlayerEquip(item : GameObject){
-	if(item.tag == "casco"){
+    var aux : Item =item.GetComponent("Item");
+	if(aux.itemTag == "casco"){
 	    PlayerUnequip(casco);
-		/*def+=item.GetComponent("Item").def;
-		atck+=item.GetComponent("Item").atck;
-		peso_equipo+=item.GetComponent("Item").peso;
-		casco=item;*/
+		def+=aux.def;
+		atck+=aux.atck;
+		peso_equipo+=aux.slots;
+		casco=item;
 		//quitar el objeto del inventario
 	}
 }

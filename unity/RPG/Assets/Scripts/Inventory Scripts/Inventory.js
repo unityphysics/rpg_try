@@ -4,14 +4,22 @@ public var Slots : int = 20;
 public var invObj : GameObject[];
 public var invBol : boolean[]	;
 private var ult: int = 0;
-
+private var player : GameObject;
 function Start () {
 	invObj = new GameObject[Slots];
 	invBol = new boolean[Slots];
+	player   = GameObject.FindGameObjectWithTag("Player");
 }
 
 function Update () {
-
+	var i : int;
+	if(Input.GetKeyDown(KeyCode.R)){
+		for(i= 0; i < Slots; ++i){
+			if(invBol[i]){ 
+				if()player.SendMessage("PlayerEquip",invObj[i]);
+			}
+		}
+	}
 }
 
 function addItem ( item : GameObject){
