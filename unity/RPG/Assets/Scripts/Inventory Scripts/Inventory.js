@@ -19,7 +19,15 @@ function Update () {
 			if(invBol[i]){ 
 				if(!equiped){
 					player.SendMessage("PlayerEquip",invObj[i]);
+					equiped=true;
 				}
+			}
+		}
+	}
+	if(Input.GetKeyDown(KeyCode.T)){
+		for(i= 0; i < Slots; ++i){
+			if(invBol[i]){ 
+				throwItem(invObj[i]);
 			}
 		}
 	}
@@ -34,10 +42,9 @@ function addItem ( item : GameObject){
 	
 	for(i= 0; i < Slots && !inserted ; ++i){
 		if(!invBol[i]){//cabe?
-			var newItem : GameObject = Instantiate(item) as GameObject; 
- 			newItem.transform.parent = GameObject.Find("Objects").transform;
- 			newItem.SetActive(false);
-			invObj[i]=newItem;
+ 			item.transform.parent = GameObject.Find("InventoryObjects").transform;
+ 			item.SetActive(false);
+			invObj[i]=item;
 			invBol[i]=true;
 			inserted=true;
 		}
@@ -49,7 +56,18 @@ function removeItem ( item : GameObject){//iteam ha de existir en el inventario
 	for(i= 0; i < Slots ; ++i){
 		if(invObj[i] == item){
 			invBol[i]=false;
-			GameObject.Destroy(item);
+		}		
+	}
+}
+
+function throwItem (item : GameObject ){
+	var i : int;
+	for(i= 0; i < Slots ; ++i){
+		if(invObj[i] == item){
+			invBol[i]=false;
+			item.transform.parent = null;
+			item.transform.position= player.transform.position;
+			item.SetActive(true);
 		}		
 	}
 }

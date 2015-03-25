@@ -1,12 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory Scripts\Inventory.js">
     <Files>
+      <File FileName="Assets\Scripts\Inventory Scripts\Inventory.js" Line="44" Column="24" />
       <File FileName="Assets\Scripts\Inventory Scripts\Item.js" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\Player Scripts\PlayerMovement.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inventory Scripts\Inventory.js" Line="52" Column="22" />
-      <File FileName="Assets\Scripts\Player Scripts\PLayerStats.js" Line="60" Column="81" />
-      <File FileName="Assets\Scripts\Inventory Scripts\Takeit.js" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\Player Scripts\PLayerStats.js" Line="53" Column="27" />
+      <File FileName="Assets\Scripts\Inventory Scripts\Takeit.js" Line="16" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -48,24 +48,37 @@ function PlayerDealDamage (){
 //funciones interaccion inventario
 function PlayerEquip (item : GameObject ) {
     var aux : Item =item.GetComponent("Item");
-	if(aux.itemTag == "casco"){
-	    PlayerUnequip(casco);
-		def+=aux.def;
-		atck+=aux.atck;
-		peso_equipo+=aux.slots;
-		casco=item;
-		var newItem : GameObject = Instantiate(item) as GameObject; 
- 		newItem.transform.parent = GameObject.Find("EquipedObjects").transform;
- 		newItem.SetActive(false);
- 		GameObject.FindGameObjectWithTag("Inventory").SendMessage("removeItem",item);
+			if(aux.itemTag == "casco" || aux.itemTag == "pechera" || aux.itemTag == "pantalones" || aux.itemTag == "botas" || aux.itemTag == "arma"){
+		   		if(aux.itemTag == "casco" && casco != null){
+		   			Debug.Log("Pene");
+	 				PlayerUnequip(casco);
+					casco=item;
+				}
+				else casco=item;
+		   		def+=aux.def;
+				atck+=aux.atck;
+				peso_equipo+=aux.slots;
+				item.transform.parent = GameObject.Find("EquipedObjects").transform;
+		 		item.SetActive(false);
+		 		GameObject.FindGameObjectWithTag("Inventory").SendMessage("removeItem",item);
+	 	
 		//quitar el objeto del inventario
+		}
 	}
-}
 
 function PlayerUnequip(item : GameObject){
-	/*def+=item.GetComponent("Item").def;
-	atck+=item.GetComponent("Item").atck;
-	peso_equipo+=item.GetComponent("Item").peso;
-	if(MenuItem.tag=="casco")casco=null;*/
-	//add inv this object
+ 		var aux : Item =item.GetComponent("Item");
+		def-=aux.def;
+		atck-=aux.atck;
+		peso_equipo-=aux.slots;
+		
+		if(casco==item)casco=null;
+		if(pechera==item)pechera=null;
+		if(pantalones==item)pantalones=null;
+		if(botas==item)botas=null;
+		if(arma==item) arma=null;
+		
+ 		item.transform.parent = GameObject.Find("InventoryObjects").transform;
+ 		item.SetActive(false);
+ 		GameObject.FindGameObjectWithTag("Inventory").SendMessage("addItem",item);
 }
