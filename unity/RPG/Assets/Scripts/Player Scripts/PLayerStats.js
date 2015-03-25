@@ -46,7 +46,7 @@ function PlayerDealDamage (){
 }
 
 //funciones interaccion inventario
-function PlayerEquip(item : GameObject){
+function PlayerEquip (item : GameObject ) {
     var aux : Item =item.GetComponent("Item");
 	if(aux.itemTag == "casco"){
 	    PlayerUnequip(casco);
@@ -54,6 +54,10 @@ function PlayerEquip(item : GameObject){
 		atck+=aux.atck;
 		peso_equipo+=aux.slots;
 		casco=item;
+		var newItem : GameObject = Instantiate(item) as GameObject; 
+ 		newItem.transform.parent = GameObject.Find("EquipedObjects").transform;
+ 		newItem.SetActive(false);
+ 		GameObject.FindGameObjectWithTag("Inventory").SendMessage("removeItem",item);
 		//quitar el objeto del inventario
 	}
 }

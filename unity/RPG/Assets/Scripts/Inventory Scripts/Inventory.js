@@ -13,22 +13,31 @@ function Start () {
 
 function Update () {
 	var i : int;
+	var equiped : boolean =false;
 	if(Input.GetKeyDown(KeyCode.R)){
 		for(i= 0; i < Slots; ++i){
 			if(invBol[i]){ 
-				if()player.SendMessage("PlayerEquip",invObj[i]);
+				if(!equiped){
+					player.SendMessage("PlayerEquip",invObj[i]);
+				}
 			}
 		}
 	}
+	
+	
 }
+
 
 function addItem ( item : GameObject){
 	var i : int;
 	var inserted : boolean = false;
 	
 	for(i= 0; i < Slots && !inserted ; ++i){
-		if(!invBol[i]){//comprobar peso
-			invObj[i]=item;
+		if(!invBol[i]){//cabe?
+			var newItem : GameObject = Instantiate(item) as GameObject; 
+ 			newItem.transform.parent = GameObject.Find("Objects").transform;
+ 			newItem.SetActive(false);
+			invObj[i]=newItem;
 			invBol[i]=true;
 			inserted=true;
 		}
@@ -37,12 +46,12 @@ function addItem ( item : GameObject){
 
 function removeItem ( item : GameObject){//iteam ha de existir en el inventario
 	var i : int;
-	for(i= 0; i < ult ; ++i){
+	for(i= 0; i < Slots ; ++i){
 		if(invObj[i] == item){
 			invBol[i]=false;
+			GameObject.Destroy(item);
 		}		
 	}
-	ult--;
 }
 
 

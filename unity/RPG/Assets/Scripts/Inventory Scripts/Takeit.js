@@ -14,7 +14,7 @@ function Update () {
 		if((nearItem.transform.position.x-player.transform.position.x) < 10){
 			if(Input.GetKeyDown(KeyCode.E)){
 				SendMessage("addItem",nearItem);
-				nearItem.SetActive(false);
+				GameObject.Destroy(nearItem,0);
 			}			
 		}	
 	}
